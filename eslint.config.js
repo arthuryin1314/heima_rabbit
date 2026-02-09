@@ -18,6 +18,11 @@ export default defineConfig([
         ...globals.browser,
       },
     },
+    rules: {
+      'vue/multi-word-component-names': 0, // 0 代表关闭该规则
+       'vue/no-empty-template': 0, // 关闭空template校验
+      'no-empty': 0 // 关闭空代码块校验（包含script setup）
+    }
   },
 
   js.configs.recommended,
