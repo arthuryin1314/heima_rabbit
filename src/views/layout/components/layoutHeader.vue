@@ -50,7 +50,7 @@ onUnmounted(() => {
       </h1>
       <ul class="app-header-nav">
         <li class="home" v-for="item in categoryList" :key="item.id">
-          <router-link to="/">{{ item.name }}</router-link>
+          <router-link :to="`/category/${item.id}`" active-class="active">{{ item.name }}</router-link>
         </li>
       </ul>
       <div class="search">
@@ -175,7 +175,9 @@ onUnmounted(() => {
     }
   }
 }
-
+active{
+  color:green
+}
 .app-header-placeholder {
   width: 100%;
   transition: height 0.2s ease;
